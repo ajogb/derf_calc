@@ -19,6 +19,9 @@ class derf_int():
     
     def __mul__(self,other):
         return derf_int(self.b10 * other.b10)
+    
+    def __floordiv__(self,other):
+        return derf_int(self.b10 // other.b10)
 
 def b10_to_derf(input: int):
     return b11_to_derf(np.base_repr(input,11))
@@ -34,7 +37,10 @@ def b11_to_derf(input: str):
 print(derf_int(21).b11)
 derf21 = derf_int(21)
 derf6 = derf_int(6)
+derf7 = derf_int(7)
 
 print(derf21 + derf6)
 print(derf21 - derf_int(4))
 print(derf21 * derf6)
+print(derf21 // derf7)
+print(derf_int(18) // derf_int(4))
