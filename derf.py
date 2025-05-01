@@ -1,5 +1,5 @@
 import numpy as np
-DERF_SYMBOL = "߈̴"
+DERF_SYMBOL = "߈"
 DERF_DIGITS = ("0","1","2","3","4","5",DERF_SYMBOL,"6","7","8","9")
 
 class derf_int():
@@ -33,14 +33,3 @@ def b11_to_derf(input: str):
             output = output + DERF_DIGITS[10]
         else: output = output + DERF_DIGITS[int(input[i])]
     return output
-
-print(derf_int(21).b11)
-derf21 = derf_int(21)
-derf6 = derf_int(6)
-derf7 = derf_int(7)
-
-print(derf21 + derf6)
-print(derf21 - derf_int(4))
-print(derf21 * derf6)
-print(derf21 // derf7)
-print(derf_int(18) // derf_int(4))
