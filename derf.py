@@ -1,5 +1,5 @@
 import numpy as np
-DERF_SYMBOL = "߈̴"
+DERF_SYMBOL = "߈"
 DERF_DIGITS = ("0","1","2","3","4","5",DERF_SYMBOL,"6","7","8","9")
 
 class derf_int():
