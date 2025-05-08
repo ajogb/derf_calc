@@ -5,6 +5,7 @@
     </head>
     <body>
         <div>
+            <input readonly=true value=0>
             <table>
                 <tbody>
                     <tr><td>9</td></tr>
@@ -24,10 +25,15 @@
                         <td>3</td>
                     </tr>
                     <tr>
-
+                        <td>0</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <script src="derf.js" type="module"></script>
+        <script>
+            document.querySelector("input").value = "";
+        </script>
     </body>
 </html>
