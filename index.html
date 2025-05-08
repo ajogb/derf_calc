@@ -2,10 +2,13 @@
 <html>
     <head>
         <title>Derf</title>
+        <link rel="stylesheet" href="css/normalize.css" /> 
+        <link rel="stylesheet" href="css/skeleton.css" />
+        <link rel="favicon" href="images/favicon.png" />
     </head>
     <body>
         <div>
-            <input readonly=true value=0>
+            <input id="num-display" readonly=true>
             <table>
                 <tbody>
                     <tr><td>9</td></tr>
@@ -33,7 +36,7 @@
 
         <script src="derf.js" type="module"></script>
         <script>
-            document.querySelector("input").value = "";
+            document.querySelector("#num-display").value = "0";
         </script>
     </body>
 </html>
