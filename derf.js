@@ -4,10 +4,6 @@ class DerfInt {
         this.b11Int = b10Tob11(this.b10Int)
         this.derfInt = b11ToDerf(this.b11Int)
     };
-
-    refresh_derf() {
-
-    };
 };
 
 function b10Tob11(b10) {
@@ -30,7 +26,27 @@ function b11ToDerf(b11) {
 };
 
 function b10ToDerf(b10) {
-    return b11ToDerf(b10Tob11)
+    return b11ToDerf(b10Tob11);
+};
+
+function derfAdd(op1,op2) {
+    return DerfInt(op1.b10Int + op2.b10Int);
+};
+
+function derfSub(op1,op2) {
+    return DerfInt(op1.b10Int - op2.b10Int);
+};
+
+function derfMul(op1,op2) {
+    return DerfInt(op1.b10Int * op2.b10Int);
+};
+
+function derfDiv(op1,op2) {
+    return DerfInt(Math.floor(op1.b10Int / op2.b10Int))
+};
+
+function derfMod(op1,op2) {
+    return DerfInt(op1.b10Int % op2.b10Int);
 }
 
 const DERF_SYMBOL = "߈";
