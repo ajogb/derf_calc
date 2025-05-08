@@ -10,7 +10,7 @@ export const Derf = {
     let b = 11;
     let b11 = "";
     while (b10 > 0) {
-      //console.log(b11)
+      console.log(b11)
       b11 = this.meta.DERF_DIGITS[b10 % b] + b11;
       b10 = Math.floor(b10 / b);
     }
@@ -23,7 +23,7 @@ export const Derf = {
     return new DerfInt(op1.b10Int - op2.b10Int);
   },
   derfMul(op1, op2) {
-    //console.log(op1.b10Int * op2.b10Int)
+    console.log(op1.b10Int * op2.b10Int)
     return new DerfInt(op1.b10Int * op2.b10Int);
   },
   derfDiv(op1, op2) {
@@ -44,7 +44,7 @@ export const Derf = {
       "6",
       "7",
       "8",
-      "9",
+      "9"
     ]
   })
 };
