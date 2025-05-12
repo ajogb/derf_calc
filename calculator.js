@@ -54,7 +54,7 @@ function execOp(opClass) {
         if (num2 === "0" | '') { op = ''; num2 = ''}
         else num2 = num2.slice(0,-1);
       }
-      if (num1 === '') num1 = 0;
+      if (num1 === '') num1 = '0';
       updateDisplay();
       break;
     case "op-clr":
