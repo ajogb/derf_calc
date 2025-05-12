@@ -7,6 +7,7 @@ export class DerfInt {
 
 export const Derf = {
   b10ToDerf(b10) {
+    if (b10 === 0) return "0";
     let b = 11;
     let b11 = "";
     while (b10 > 0) {
