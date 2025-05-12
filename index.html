@@ -6,42 +6,40 @@
     </head>
     <body>
         <div>
-            <input id="num-display" readonly="true" />
+            <input id="num-display" readonly="true" value="0"/>
             <div id="numpad">
                     <div class="numrow">
-                        <button class="numbutton">9</button>
-                        <button class="numbutton">C</button>
-                        <button class="numbutton">BS</button>
-                        <button class="numbutton">/</button>
+                        <button class="calcbutton numbutton">9</button>
+                        <button class="calcbutton op-clr">C</button>
+                        <button class="calcbutton op-bs">BS</button>
+                        <button class="calcbutton op-div">/</button>
                     </div>
                     <div class="numrow">
-                        <button class="numbutton">6</button>
-                        <button class="numbutton">7</button>
-                        <button class="numbutton">8</button>
-                        <button class="numbutton">*</button>
+                        <button class="calcbutton numbutton">6</button>
+                        <button class="calcbutton numbutton">7</button>
+                        <button class="calcbutton numbutton">8</button>
+                        <button class="calcbutton op-mul">*</button>
                     </div>
                     <div class="numrow">
-                        <button class="numbutton">4</button>
-                        <button class="numbutton">5</button>
-                        <button class="numbutton">߈</button>
-                        <button class="numbutton">-</button>
+                        <button class="calcbutton numbutton">4</button>
+                        <button class="calcbutton numbutton">5</button>
+                        <button class="calcbutton numbutton">d</button>
+                        <button class="calcbutton op-sub">-</button>
                     </div>
                     <div class="numrow">
-                        <button class="numbutton">1</button>
-                        <button class="numbutton">2</button>
-                        <button class="numbutton">3</button>
-                        <button class="numbutton">+</button>
+                        <button class="calcbutton numbutton">1</button>
+                        <button class="calcbutton numbutton">2</button>
+                        <button class="calcbutton numbutton">3</button>
+                        <button class="calcbutton op-add">+</button>
                     </div>
                     <div class="numrow">
-                        <button class="numbutton doublewidth">0</button>
-                        <button class="numbutton">=</button>
+                        <button class="calcbutton doublewidth numbutton">0</button>
+                        <button class="calcbutton op-eq">=</button>
                     </div>
             </table>
         </div>
 
         <script src="derf.js" type="module"></script>
-        <script>
-            document.querySelector("#num-display").value = "0";
-        </script>
+        <script src="calculator.js"></script>
     </body>
 </html>
