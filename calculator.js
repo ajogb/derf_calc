@@ -1,11 +1,12 @@
-let numButtons = document.querySelectorAll(".numbutton");
+const numbar = document.querySelector("#num-display");
+const numButtons = document.querySelectorAll(".numbutton");
+const opButtons = document.querySelectorAll('[class*=" op-"]');
+
 for (button of numButtons) {
   button.addEventListener("click", numClick);
 }
-
-let opButtons = document.querySelectorAll('[class*=" op-"]');
 for (button of opButtons) {
-  button.addEventListener("click",opClick)
+  button.addEventListener("click", opClick);
 }
 
 function numClick(event) {
@@ -13,13 +14,41 @@ function numClick(event) {
 }
 
 function opClick(event) {
-  
+  let opClasses = event.target.classList;
+  let opClass = null;
+  for (item of opClasses) {
+    if (item.startsWith("op-")) {
+      opClass = item;
+    }
+  }
+  execOp(opClass)
+}
+
+function execOp(opClass) {
+  switch (opClass) {
+    case "op-sub":
+      break;
+    case "op-add":
+      break;
+    case "op-mul":
+      break;
+    case "op-div":
+      break;
+    case "op-eq":
+      break;
+    case "op-bs":
+      if (numbar.value.length !== 1) numbar.value = numbar.value.slice(0, -1);
+      else numbar.value = 0;
+    case "op-clr":
+      break;
+    default:
+      break;
+  }
 }
 
 function addDigit(digit) {
-  const numbar = document.querySelector("#num-display")
   if (numbar.value === "0") {
     numbar.value = "";
   }
-  numbar.value = `${numbar.value}${digit}`
+  numbar.value = `${numbar.value}${digit}`;
 }
